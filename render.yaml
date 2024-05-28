@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: your-service-name
+    env: python
+    plan: free  # or any other plan
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: HUGGING_FACE_API_KEY
+        value: your_huggingface_api_key
